@@ -37,28 +37,13 @@ body {
 
 .college-name {
   grid-column: 1 / -1;
-  justify-self: center;
-  text-align: center;
   background-color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  padding: 3rem;
-  border-radius: 1rem;
+  padding: 1rem;
   margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem; }
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .college-name img {
-    height: 14rem;
-    border-radius: 1rem; }
-    @media (max-width: 425px) {
-      .college-name img {
-        height: 10rem; } }
-  @media (max-width: 425px) {
-    .college-name {
-      width: 100%;
-      margin: 0 auto 2rem auto;
-      padding: 2rem 1rem; } }
+    width: 100%; }
 
 .heading-1 {
   font-size: 4.2rem;
@@ -85,7 +70,6 @@ body {
       letter-spacing: 1px; } }
 
 .form {
-  background-color: #faebfd;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -167,6 +151,9 @@ body {
     .form__upload:active {
       transform: scale(1);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 425px) {
+      .form__upload {
+        margin-bottom: 2.5rem; } }
   .form__submit {
     grid-column: 1 / -1;
     font-size: 2rem;
@@ -186,6 +173,9 @@ body {
     .form__submit:active {
       transform: scale(1);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    @media (max-width: 425px) {
+      .form__submit {
+        justify-self: stretch; } }
   @media (max-width: 425px) {
     .form {
       width: 100%;

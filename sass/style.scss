@@ -42,28 +42,15 @@ body {
 
 .college-name {
   grid-column: 1 / -1;
-  justify-self: center;
-  text-align: center;
   background-color: #fff;
-  box-shadow: 0 1rem 2rem rgba(#000, 0.2);
-  padding: 3rem;
-  border-radius: 1rem;
+  padding: 1rem;
   margin-bottom: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(#000, 0.2);
   img {
-    height: 14rem;
-    border-radius: 1rem;
-    @media (max-width: 425px) {
-      height: 10rem;
-    }
-  }
-  @media (max-width: 425px) {
     width: 100%;
-    margin: 0 auto 2rem auto;
-    padding: 2rem 1rem;
+    @media (max-width: 425px) {
+    }
   }
 }
 
@@ -94,8 +81,6 @@ body {
 }
 
 .form {
-  //temporary
-  background-color: #faebfd;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(#000, 0.2);
@@ -201,6 +186,9 @@ body {
       transform: scale(1);
       box-shadow: 0 1rem 2rem rgba(#000, 0.2);
     }
+    @media (max-width: 425px) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__submit {
@@ -227,6 +215,9 @@ body {
       transform: scale(1);
       box-shadow: 0 1rem 2rem rgba(#000, 0.2);
     }
+    @media (max-width: 425px) {
+      justify-self: stretch;
+    }
   }
   @media (max-width: 425px) {
     width: 100%;
@@ -235,5 +226,3 @@ body {
     gap: 1.5rem;
   }
 }
-
-//Media Queries
