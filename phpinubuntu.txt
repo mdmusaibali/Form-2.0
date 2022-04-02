@@ -1,0 +1,15 @@
+php.ini location in ubuntu:
+/etc/php/5.6/apache2/php.ini
+
+Things to uncomment/configure in php.ini:
+1)post_max_size=1000M
+2)file_uploads=On
+3)upload_max_filesize = 1000M
+4)extension_dir = "ext"
+5)extension=mysqli
+6)extension=pdo_mysql
+
+Things that i did not do and need to be done:
+1) Making it impossible for user to reload php status page
+2) Assigning appropriate data types to the data items in table 
+3) Providing appropriate constraints

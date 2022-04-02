@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="scripts/script.js"></script>
+    <title>PDA Forms</title>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <div class="college-name">
+        <!-- <img src="img/logo.jpg" alt="PDA College Logo" />
+        <div class="div">
+          <h1 class="heading-1">P.D.A College of Engineering</h1>
+          <h2 class="heading-2">
+            Department of Computer Science and Engineering
+          </h2>
+        </div> -->
+        <img src="img/PDACEK_LOGO.png" alt="" />
+      </div>
+      <form
+        action="insertData.php"
+        method="post"
+        enctype="multipart/form-data"
+        class="form"
+        role="form"
+      >
+        <div class="form__description">
+          Details of Journal/Conference Publications
+        </div>
+
+        <div class="form__group">
+          <input
+            id="name"
+            name="name"
+            type="text"
+            class="form__input"
+            placeholder="Name of the Author(s)"
+            required
+          />
+          <label for="name" class="form__label">Name of the Author(s)</label>
+        </div>
+        <div class="form__group">
+          <select
+            name="department"
+            id="department"
+            class="form__select"
+            required
+          >
+            <option value="">Department</option>
+            <option value="architecture">Architecture</option>
+            <option value="biotechnology">Biotechnology</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <input
+            id="titleOfManuscript"
+            name="titleOfManuscript"
+            type="text"
+            class="form__input"
+            placeholder="Title of the Manuscript"
+            required
+          />
+          <label for="titleOfManuscript" class="form__label"
+            >Title of the Manuscript</label
+          >
+        </div>
+        <div class="form__group">
+          <select
+            name="typeOfPublication"
+            id="typeOfPublication"
+            class="form__select"
+            required
+          >
+            <option value="">Type of Publication</option>
+            <option value="bookChapter">Book Chapter</option>
+            <option value="conferenceProceeding">Conference Proceeding</option>
+            <option value="journal">Journal</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <select
+            name="typeOfConference"
+            id="typeOfConference"
+            class="form__select"
+            required
+          >
+            <option value="">Type of Conference</option>
+            <option value="nationalConference">National Conference</option>
+            <option value="internationalConference">
+              International Conference
+            </option>
+          </select>
+        </div>
+        <div class="form__group">
+          <input
+            id="titleOfJournal"
+            name="titleOfJournal"
+            type="text"
+            class="form__input"
+            placeholder="Title of Journal/Conference/Book Chapter"
+            required
+          />
+          <label for="titleOfJournal" class="form__label"
+            >Title of the Journal/ Conference/ Book Chapter</label
+          >
+        </div>
+        <div class="form__group">
+          <input
+            id="volumeNumber"
+            name="volumeNumber"
+            type="text"
+            class="form__input"
+            placeholder="Volume Number"
+            required
+          />
+          <label for="volumeNumber" class="form__label">Volume Number</label>
+        </div>
+        <div class="form__group">
+          <input
+            id="issueNumber"
+            name="issueNumber"
+            type="text"
+            class="form__input"
+            placeholder="Issue Number"
+            required
+          />
+          <label for="issueNumber" class="form__label">Issue Number</label>
+        </div>
+        <div class="form__group">
+          <input
+            id="pageNumber"
+            name="pageNumber"
+            type="text"
+            class="form__input"
+            placeholder="Page Number"
+            required
+          />
+          <label for="pageNumber" class="form__label">Page Number</label>
+        </div>
+        <div class="form__group">
+          <input
+            id="yearOfPublication"
+            name="yearOfPublication"
+            type="text"
+            class="form__input"
+            placeholder="Year of Publication"
+            required
+          />
+          <label for="yearOfPublication" class="form__label"
+            >Year of Publication</label
+          >
+        </div>
+        <div class="form__group">
+          <input
+            id="indexing"
+            name="indexing"
+            type="text"
+            class="form__input"
+            placeholder="Indexing"
+            required
+          />
+          <label for="indexing" class="form__label">Indexing</label>
+        </div>
+        <div class="form__group">
+          <input
+            id="h_Index"
+            name="h_Index"
+            type="text"
+            class="form__input"
+            placeholder="h-Index"
+            required
+          />
+          <label for="h_Index" class="form__label">h-Index</label>
+        </div>
+        <div class="form__group">
+          <input
+            id="impactFactor"
+            name="impactFactor"
+            type="text"
+            class="form__input"
+            placeholder="Impact factor"
+            required
+          />
+          <label for="impactFactor" class="form__label">Impact factor</label>
+        </div>
+        <div class="form__group">
+          <label
+            class="form__upload"
+            onclick="document.getElementById('file').click()"
+          >
+            Upload Publications
+          </label>
+          <input
+            type="file"
+            id="file"
+            name="file"
+            style="display: none"
+            onchange="getFileData(this);"
+          />
+        </div>
+        <button type="submit" class="form__submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
